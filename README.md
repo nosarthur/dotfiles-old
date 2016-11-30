@@ -12,4 +12,4 @@ git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
 # vimrc
 
-ln -s vimrc ~/.vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
