@@ -17,6 +17,9 @@ syntax on
 filetype on
 filetype plugin on
 
+set path+=**
+set wildmenu
+
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 
