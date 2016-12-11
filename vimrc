@@ -1,6 +1,7 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+set number
 set nocompatible
 
 set autoindent
@@ -12,7 +13,21 @@ set expandtab
 set colorcolumn=80
 set ignorecase
 
+set foldmethod=indent
+"set nofoldenable
+set foldlevel=2
+
 syntax on
+
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+" easier moving of code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+set nobackup
+set nowritebackup
+set noswapfile
 
 filetype on
 filetype plugin on
