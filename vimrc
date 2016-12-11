@@ -17,6 +17,13 @@ set foldmethod=indent
 "set nofoldenable
 set foldlevel=2
 
+let mapleader = ","
+noremap <Leader>e :quit<CR> " Quit current window
+noremap <Leader>E :qa!<CR> " Quit all windows
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+vnoremap <Leader>s :sort<CR>
+
 syntax on
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
