@@ -13,3 +13,10 @@ git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 # vimrc
 
 ln -s ~/.vim/vimrc ~/.vimrc
+
+# git diff/merge tools
+
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+git config --global difftool.prompt false
+

@@ -13,9 +13,9 @@ set expandtab
 set colorcolumn=80
 set ignorecase
 
-set foldmethod=indent
+"set foldmethod=indent
 "set nofoldenable
-set foldlevel=2
+"set foldlevel=2
 
 let mapleader = ","
 noremap <Leader>e :quit<CR> " Quit current window
@@ -42,6 +42,7 @@ filetype plugin on
 set path+=**
 set wildmenu
 
+nmap <F7> :SyntasticToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 
