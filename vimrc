@@ -17,6 +17,9 @@ set ignorecase
 "set nofoldenable
 "set foldlevel=2
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 let mapleader = ","
 noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR> " Quit all windows
