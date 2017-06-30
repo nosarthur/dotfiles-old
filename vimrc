@@ -3,6 +3,7 @@ execute pathogen#helptags()
 
 set number
 set nocompatible
+set hlsearch
 
 set autoindent
 set smartindent
