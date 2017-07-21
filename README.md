@@ -1,6 +1,7 @@
 # ctags and gotags
 
 http://ctags.sourceforge.net
+
 go get -u github.com/jstemmer/gotags
 
 # plugins
