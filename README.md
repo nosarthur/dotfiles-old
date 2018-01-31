@@ -9,6 +9,7 @@ go get -u github.com/jstemmer/gotags
 All plugins need to be placed in the `bundle` folder.
 
 git clone https://github.com/fatih/vim-go.git
+
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
 pip install flake8
@@ -16,6 +17,7 @@ pip install flake8
 # non-essential plugins
 
 git clone https://github.com/majutsushi/tagbar.git
+
 git clone https://github.com/scrooloose/nerdtree.git
 
 # link vimrc
