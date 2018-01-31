@@ -1,3 +1,11 @@
+To debug, add in .vimrc 
+
+```
+let g:syntastic_debug=3
+```
+
+and `:mes` in vim
+
 # ctags and gotags
 
 http://ctags.sourceforge.net
