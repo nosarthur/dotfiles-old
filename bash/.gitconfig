@@ -1,0 +1,9 @@
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[user]
+	name = Dong Zhou
+	email = zhou.dong@gmail.com

@@ -30,8 +30,6 @@ vnoremap <Leader>s :sort<CR>
 
 syntax on
 
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-
 " easier moving of code blocks
 vnoremap < <gv
 vnoremap > >gv
@@ -100,5 +98,5 @@ let g:tagbar_type_go = {
 \ }
 
 
-let g:syntastic_python_checkers=["flake8"]                                         
+let g:syntastic_python_checkers=["pyflakes"]
 let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,E303"
