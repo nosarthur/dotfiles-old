@@ -100,3 +100,5 @@ let g:tagbar_type_go = {
 
 let g:syntastic_python_checkers=["pyflakes"]
 let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,E303"
+
+let g:syntastic_rst_checkers=['sphinx']
