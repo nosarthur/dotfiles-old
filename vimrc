@@ -58,18 +58,17 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
 let g:go_disable_autoinstall = 0
-let g:go_highlight_functions = 1  
-let g:go_highlight_methods = 1  
-let g:go_highlight_structs = 1  
-let g:go_highlight_operators = 1  
-let g:go_highlight_build_constraints = 1  
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
-let g:tagbar_type_go = {  
+let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
         \ 'p:package',
@@ -102,3 +101,5 @@ let g:syntastic_python_checkers=["pyflakes"]
 let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,E303"
 
 let g:syntastic_rst_checkers=['sphinx']
+
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'rst'] }
