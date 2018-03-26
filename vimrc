@@ -34,6 +34,7 @@ syntax on
 vnoremap < <gv
 vnoremap > >gv
 
+" get rid of temporary files
 set nobackup
 set nowritebackup
 set noswapfile
@@ -41,12 +42,14 @@ set noswapfile
 filetype on
 filetype plugin on
 
+" recursive find
 set path+=**
-set wildmenu
 
-nmap <F7> :SyntasticToggle<CR>
-nmap <F8> :TagbarToggle<CR>
-nmap <F9> :NERDTreeToggle<CR>
+" command hint
+set wildmenu
+set wildmode=longest:list,full
+
+nmap <F10> :SyntasticToggle<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
