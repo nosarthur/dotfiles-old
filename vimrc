@@ -6,7 +6,7 @@ set nocompatible
 set hlsearch
 
 set autoindent
-set smartindent
+"set smartindent
 
 set tabstop=4
 set shiftwidth=4
