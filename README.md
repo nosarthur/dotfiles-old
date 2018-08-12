@@ -11,6 +11,10 @@ and `:mes` in vim
 http://ctags.sourceforge.net
 
 go get -u github.com/jstemmer/gotags
+go get -u github.com/golang/lint/golint
+go get -u github.com/kisielk/errcheck
+go get -u golang.org/x/tools/cmd/goimports
+
 
 # plugins
 
