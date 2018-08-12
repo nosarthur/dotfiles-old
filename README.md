@@ -26,6 +26,11 @@ git clone https://github.com/fatih/vim-go.git
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 pip install flake8
 ```
+Then inside vim
+```
+:GoInstallBinaries 
+```
+
 # non-essential plugins
 
 ```
