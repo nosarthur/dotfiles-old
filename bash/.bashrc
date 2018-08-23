@@ -2,6 +2,14 @@ alias ls="ls --color=auto"
 alias ll="ls -lhtr"
 alias ff='find . -name'
 
+alias ipython="python3 -m IPython"
+alias gita="python3 -m gita"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+alias go2src="cd $GOPATH/src/github.com/nosarthur"
+
 # Enable tab completion
 source ~/.git-completion.bash
 
