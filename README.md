@@ -28,7 +28,7 @@ pip install flake8
 ```
 Then inside vim
 ```
-:GoInstallBinaries 
+:GoInstallBinaries
 ```
 
 # non-essential plugins
