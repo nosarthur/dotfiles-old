@@ -7,3 +7,5 @@
 [user]
 	name = Dong Zhou
 	email = zhou.dong@gmail.com
+[core]                                                                             
+    editor = vim 
