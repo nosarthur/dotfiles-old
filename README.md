@@ -1,4 +1,6 @@
-To debug, add in .vimrc 
+# dotfiles
+
+To debug vim syntastic, add in .vimrc 
 
 ```
 let g:syntastic_debug=3
@@ -39,12 +41,8 @@ git clone https://github.com/scrooloose/nerdtree.git
 ```
 # link vimrc
 
-ln -s ~/.vim/vimrc ~/.vimrc
-
-# git diff/merge tools
-
 ```
-git config --global diff.tool vimdiff
-git config --global merge.tool vimdiff
-git config --global difftool.prompt false
+ln -s ~/dotfiles/vimrc ~/.vimrc
+mv ~/dotfiles/bash/* ~/
 ```
+
