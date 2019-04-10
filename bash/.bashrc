@@ -10,7 +10,7 @@ alias gita="python3 -m gita"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-alias go2src="cd $GOPATH/src/github.com/nosarthur"
+alias go2github="cd $GOPATH/src/github.com/nosarthur"
 
 # Enable tab completion
 source ~/.git-completion.bash
