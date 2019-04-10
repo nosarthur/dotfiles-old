@@ -1,6 +1,7 @@
 alias ls="ls --color=auto"
 alias ll="ls -lhtr"
 alias ff='find . -name'
+alias vi="vim"
 
 alias ipython="python3 -m IPython"
 alias gita="python3 -m gita"
