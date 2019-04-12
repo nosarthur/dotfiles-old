@@ -1,6 +1,6 @@
 # dotfiles
 
-To debug vim syntastic, add in .vimrc 
+To debug vim syntastic, add in .vimrc
 
 ```
 let g:syntastic_debug=3
@@ -24,8 +24,9 @@ go get -u golang.org/x/tools/cmd/goimports
 All plugins need to be placed in the `bundle` folder.
 
 ```
-git clone https://github.com/fatih/vim-go.git
+git clone --depth=1 https://github.com/fatih/vim-go.git
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+git clone --depth=1 https://github.com/ervandew/supertab.git
 pip install flake8
 ```
 Then inside vim
