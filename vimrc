@@ -13,6 +13,7 @@ set shiftwidth=4
 set expandtab
 set colorcolumn=80
 set ignorecase
+set updatetime=100
 
 "set foldmethod=indent
 "set nofoldenable
