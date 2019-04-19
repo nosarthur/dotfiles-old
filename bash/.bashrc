@@ -1,6 +1,6 @@
 set -o vi
 
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias ll="ls -lhtr"
 alias ff='find . -name'
 alias vi="vim"
