@@ -1,5 +1,7 @@
 set -o vi
 
+shopt -s autocd
+
 alias ls="ls -hN --color=auto --group-directories-first"
 alias ll="ls -lhtr"
 alias ff='find . -name'
