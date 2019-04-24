@@ -28,6 +28,7 @@ git clone --depth=1 https://github.com/fatih/vim-go.git
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 git clone --depth=1 https://github.com/ervandew/supertab.git
 git clone --depth=1 https://github.com/airblade/vim-gitgutter.git
+git clone --depth=1 https://github.com/itchyny/lightline.vim.git
 pip install flake8
 ```
 Then inside vim
