@@ -1,6 +1,10 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+"automatic reload of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+set clipboard=unnamed
 set number
 set nocompatible
 set hlsearch
@@ -15,6 +19,7 @@ set expandtab
 set colorcolumn=80
 set ignorecase
 set updatetime=100
+set nowrap
 
 "set foldmethod=indent
 "set nofoldenable
