@@ -22,6 +22,13 @@ pip install flake8
 
 # plugins
 
+I just changed from pathogen to vim-plug.
+
+```
+:source %
+:PlugInstall
+```
+
 Then inside vim
 ```
 :GoInstallBinaries

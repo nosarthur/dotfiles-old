@@ -2,8 +2,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
-Plug 'vim-syntastic/syntastic.git'
-Plug 'airblade/vim-gitgutter.git'
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 
