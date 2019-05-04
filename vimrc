@@ -12,10 +12,6 @@ autocmd! bufwritepost .vimrc source %
 
 set clipboard=unnamed
 
-"automatic reload of .vimrc
-autocmd! bufwritepost .vimrc source %
-
-set clipboard=unnamed
 set number
 set nocompatible
 set hlsearch
@@ -48,8 +44,6 @@ map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
 
 syntax enable
-"set background=dark
-"colorscheme solarized
 
 " easier moving of code blocks
 vnoremap < <gv
@@ -121,7 +115,7 @@ let g:tagbar_type_go = {
 \ }
 
 
-let g:syntastic_python_checkers=["flake8", "python3"]
+let g:syntastic_python_checkers=["flake8"]
 let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,E303"
 let g:syntastic_tex_checkers = ['lacheck']
 let g:syntastic_rst_checkers=['sphinx']
