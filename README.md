@@ -17,26 +17,17 @@ go get -u github.com/jstemmer/gotags
 go get -u github.com/golang/lint/golint
 go get -u github.com/kisielk/errcheck
 go get -u golang.org/x/tools/cmd/goimports
+pip install flake8
 ```
 
 # plugins
 
-All plugins need to be placed in the `bundle` folder.
-
-```
-git clone --depth=1 https://github.com/fatih/vim-go.git
-git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-git clone --depth=1 https://github.com/ervandew/supertab.git
-git clone --depth=1 https://github.com/airblade/vim-gitgutter.git
-git clone --depth=1 https://github.com/itchyny/lightline.vim.git
-pip install flake8
-```
 Then inside vim
 ```
 :GoInstallBinaries
 ```
 
-# non-essential plugins
+Some non-essential plugins are
 
 ```
 git clone https://github.com/majutsushi/tagbar.git
@@ -48,4 +39,3 @@ git clone https://github.com/scrooloose/nerdtree.git
 ln -s ~/dotfiles/vimrc ~/.vimrc
 mv ~/dotfiles/bash/* ~/
 ```
-

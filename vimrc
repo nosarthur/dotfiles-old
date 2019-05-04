@@ -1,5 +1,16 @@
-execute pathogen#infect()
-execute pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'itchyny/lightline.vim'
+Plug 'ervandew/supertab'
+Plug 'vim-syntastic/syntastic.git'
+Plug 'airblade/vim-gitgutter.git'
+call plug#end()
+
+
+"automatic reload of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+set clipboard=unnamed
 
 "automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -9,6 +20,7 @@ set number
 set nocompatible
 set hlsearch
 set laststatus=2
+set spell
 
 set autoindent
 "set smartindent
@@ -35,7 +47,9 @@ map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
 
-syntax on
+syntax enable
+"set background=dark
+"colorscheme solarized
 
 " easier moving of code blocks
 vnoremap < <gv
