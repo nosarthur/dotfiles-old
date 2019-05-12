@@ -22,6 +22,7 @@ source ~/.git-completion.bash
 source ~/.gita-completion.bash 
 
 # colors!
+red="\[\033[01;31m\]"
 green="\[\033[0;32m\]"
 blue="\[\033[0;34m\]"
 purple="\[\033[0;37m\]"
@@ -33,4 +34,4 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
-export PS1="\u$green\$(__git_ps1)$blue \W $ $reset"
+export PS1="$red\D{%H:%M} \u$green\$(__git_ps1)$blue \W $ $reset"
