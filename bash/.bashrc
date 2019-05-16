@@ -19,7 +19,7 @@ alias go2github="cd $GOPATH/src/github.com/nosarthur"
 
 # Enable tab completion
 source ~/.git-completion.bash
-source ~/.gita-completion.bash 
+source ~/.gita-completion.bash
 
 # colors!
 red="\[\033[01;31m\]"
