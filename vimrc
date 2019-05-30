@@ -37,8 +37,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 let mapleader = ","
-noremap <Leader>e :quit<CR> " Quit current window
-noremap <Leader>E :qa!<CR> " Quit all windows
+"noremap <Leader>e :quit<CR> " Quit current window
+noremap <Leader>e :qa!<CR> " Quit all windows
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
@@ -75,7 +75,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:go_list_type = "quickfix"
 
 let g:go_disable_autoinstall = 0
@@ -120,4 +120,4 @@ let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,
 let g:syntastic_tex_checkers = ['lacheck']
 let g:syntastic_rst_checkers=['sphinx']
 
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'rst'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['rst', 'go'] }
