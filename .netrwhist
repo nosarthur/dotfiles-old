@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/chronos/user/.vim'
-let g:netrw_dirhist_2='/usr/local/work/doc/atom-mapping/docs/fep-mapper'
-let g:netrw_dirhist_3='/usr/local/.config'
-let g:netrw_dirhist_4='/usr/local/work/doc/dotfiles'
-let g:netrw_dirhist_5='/usr/local/work/doc/blog/_drafts'
