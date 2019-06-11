@@ -2,11 +2,12 @@ set -o vi
 export EDITOR=/usr/bin/vim
 
 shopt -s autocd
+shopt -s direxpand
 
 alias ls="ls -hN --color=auto --group-directories-first"
 alias ll="ls -lhtr"
 alias ff='find . -name'
-alias vi="vim"
+alias v="vim"
 alias g='git'
 
 alias ipython="python3 -m IPython"
@@ -14,6 +15,7 @@ alias gita="python3 -m gita"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export CDPATH=~
 
 alias go2github="cd $GOPATH/src/github.com/nosarthur"
 
