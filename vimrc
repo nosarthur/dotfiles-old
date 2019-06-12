@@ -39,6 +39,8 @@ match ExtraWhitespace /\s\+$/
 let mapleader = ","
 "noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>e :qa!<CR> " Quit all windows
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <C-c>:w<cr>
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
