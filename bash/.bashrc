@@ -15,7 +15,7 @@ alias gita="python3 -m gita"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export CDPATH=~
+export CDPATH=.:~
 
 alias go2github="cd $GOPATH/src/github.com/nosarthur"
 
