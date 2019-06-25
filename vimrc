@@ -17,6 +17,7 @@ set nocompatible
 set hlsearch
 set laststatus=2
 set spell
+set title
 
 set autoindent
 "set smartindent
