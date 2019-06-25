@@ -44,6 +44,11 @@ inoremap <leader>s <C-c>:w<cr>
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap " ""<ESC>i
+inoremap ' ''<ESC>i
+inoremap { {<Cr>}<Esc>O
 
 syntax enable
 
