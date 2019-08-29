@@ -4,6 +4,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 
@@ -42,14 +43,14 @@ let mapleader = ","
 noremap <Leader>e :qa!<CR> " Quit all windows
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+"map <Leader>n <esc>:tabprevious<CR>
+"map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
-inoremap { {<Cr>}<Esc>O
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+"inoremap " ""<ESC>i
+"inoremap ' ''<ESC>i
+"inoremap { {<Cr>}<Esc>O
 
 syntax enable
 
