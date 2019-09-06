@@ -73,7 +73,7 @@ set path+=**
 set wildmenu
 set wildmode=longest:list,full
 
-nmap <F10> :SyntasticToggle<CR>
+nmap <Leader>t :SyntasticToggle<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
