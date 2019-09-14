@@ -130,3 +130,6 @@ let g:syntastic_tex_checkers = ['lacheck']
 let g:syntastic_rst_checkers=['sphinx']
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['rst', 'go'] }
+"let g:syntastic_debug=3
+
+let g:AutoPairsShortcutFastWrap='<C-w>'
