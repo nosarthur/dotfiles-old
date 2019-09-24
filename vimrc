@@ -37,6 +37,7 @@ set nowrap
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+autocmd BufWritePre * %s/\s\+$//e 
 
 let mapleader = ","
 "noremap <Leader>e :quit<CR> " Quit current window
