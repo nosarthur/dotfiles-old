@@ -13,7 +13,7 @@ autocmd! bufwritepost .vimrc source %
 
 set clipboard=unnamed
 
-set number
+set number relativenumber
 set nocompatible
 set hlsearch
 set laststatus=2
