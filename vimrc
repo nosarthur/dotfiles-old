@@ -19,6 +19,7 @@ set hlsearch
 set laststatus=2
 set spell
 set title
+set encoding=utf-8
 
 set autoindent
 "set smartindent
