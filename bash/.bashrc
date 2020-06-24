@@ -1,4 +1,6 @@
 set -o vi
+bind -m vi-insert 'Control-l: clear-screen'
+
 export EDITOR=/usr/bin/vim
 
 shopt -s autocd
