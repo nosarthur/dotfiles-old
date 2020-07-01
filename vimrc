@@ -13,7 +13,7 @@ autocmd! bufwritepost .vimrc source %
 
 set clipboard=unnamed
 
-set number relativenumber
+set number
 set nocompatible
 set hlsearch
 set laststatus=2
@@ -29,6 +29,7 @@ set shiftwidth=4
 set expandtab
 set colorcolumn=80
 set ignorecase
+set smartcase
 set updatetime=100
 set nowrap
 
