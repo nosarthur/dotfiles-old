@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 
@@ -104,6 +105,7 @@ set wildmenu
 set wildmode=longest:list,full
 
 nmap <Leader>t :SyntasticToggle<CR>
+nmap <leader>b :TagbarToggle<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
