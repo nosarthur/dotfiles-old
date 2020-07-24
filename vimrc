@@ -9,8 +9,11 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
+Plug 'junegunn/seoul256.vim'
 call plug#end()
 
+let g:seoul256_background = 235
+colo seoul256
 
 "automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -110,8 +113,14 @@ set wildmode=longest:list,full
 nmap <Leader>t :SyntasticToggle<CR>
 nmap <leader>b :TagbarToggle<CR>
 nmap <leader>a :CtrlSF -R ""<Left>
-nmap <leader>f :GFiles<CR>
+nmap <leader>f :Files<CR>
 nmap <leader>w :BLines<CR>
+nmap <leader>l :Lines!<CR>
+nmap <leader>d :Buffers<CR>
+nmap <leader>r :Rg!<CR>
+
+" fix coc.nvim box color
+highlight Pmenu ctermbg=black ctermfg=yellow
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
