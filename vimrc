@@ -113,10 +113,11 @@ set wildmode=longest:list,full
 nmap <Leader>t :SyntasticToggle<CR>
 nmap <leader>b :TagbarToggle<CR>
 nmap <leader>a :CtrlSF -R ""<Left>
-nmap <leader>f :Files<CR>
+nmap <leader>f :GFiles!<CR>
+nmap <leader>o :Files!<CR>
 nmap <leader>w :BLines<CR>
 nmap <leader>l :Lines!<CR>
-nmap <leader>d :Buffers<CR>
+nmap <leader>u :Buffers<CR>
 nmap <leader>r :Rg!<CR>
 
 " fix coc.nvim box color
