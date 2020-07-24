@@ -6,6 +6,9 @@ Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'dyng/ctrlsf.vim'
 call plug#end()
 
 
