@@ -110,8 +110,8 @@ set wildmode=longest:list,full
 nmap <Leader>t :SyntasticToggle<CR>
 nmap <leader>b :TagbarToggle<CR>
 nmap <leader>a :CtrlSF -R ""<Left>
-nmap // :BLines!<CR>
-nmap ?? :Rg!<CR>
+nmap <leader>f :GFiles<CR>
+nmap <leader>w :BLines<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
