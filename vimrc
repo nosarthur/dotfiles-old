@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
@@ -110,8 +109,7 @@ set path+=**
 set wildmenu
 set wildmode=longest:list,full
 
-nmap <Leader>t :SyntasticToggle<CR>
-nmap <leader>b :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 nmap <leader>a :CtrlSF -R ""<Left>
 nmap <leader>f :GFiles!<CR>
 nmap <leader>o :Files!<CR>
@@ -123,16 +121,6 @@ nmap <leader>r :Rg!<CR>
 " fix coc.nvim box color
 highlight Pmenu ctermbg=black ctermfg=yellow
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:go_list_type = "quickfix"
 
 let g:go_disable_autoinstall = 0
@@ -170,14 +158,5 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
-
-
-let g:syntastic_python_checkers=["flake8"]
-let g:syntastic_python_flake8_args="--ignore=E125,E126,E127,E128,E201,E221,E501,E303"
-let g:syntastic_tex_checkers = ['lacheck']
-let g:syntastic_rst_checkers=['sphinx']
-
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['rst', 'go'] }
-"let g:syntastic_debug=3
 
 let g:AutoPairsShortcutFastWrap='<C-w>'
