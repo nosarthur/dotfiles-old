@@ -48,18 +48,19 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWritePre * %s/\s\+$//e 
 
 let mapleader = ","
-"noremap <Leader>e :quit<CR> " Quit current window
+noremap <Leader>q :quit<CR> " Quit current window
 noremap <Leader>e :qa!<CR> " Quit all windows
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
-"map <Leader>n <esc>:tabprevious<CR>
-"map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
-"inoremap ( ()<ESC>i
-"inoremap [ []<ESC>i
-"inoremap " ""<ESC>i
-"inoremap ' ''<ESC>i
-"inoremap { {<Cr>}<Esc>O
+nmap <leader>t :TagbarToggle<CR>
+nmap <leader>a :CtrlSF -R ""<Left>
+nmap <leader>f :GFiles!<CR>
+nmap <leader>o :Files!<CR>
+nmap <leader>w :BLines<CR>
+nmap <leader>l :Lines!<CR>
+nmap <leader>u :Buffers<CR>
+nmap <leader>r :Rg!<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -108,15 +109,6 @@ set path+=**
 " command hint
 set wildmenu
 set wildmode=longest:list,full
-
-nmap <leader>t :TagbarToggle<CR>
-nmap <leader>a :CtrlSF -R ""<Left>
-nmap <leader>f :GFiles!<CR>
-nmap <leader>o :Files!<CR>
-nmap <leader>w :BLines<CR>
-nmap <leader>l :Lines!<CR>
-nmap <leader>u :Buffers<CR>
-nmap <leader>r :Rg!<CR>
 
 " fix coc.nvim box color
 highlight Pmenu ctermbg=black ctermfg=yellow
