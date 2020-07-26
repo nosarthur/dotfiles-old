@@ -11,6 +11,8 @@ alias ll="ls -lhtr"
 alias ff='find . -name'
 alias v="vim"
 alias g='git'
+alias d='dict'
+alias m='neomutt'
 
 alias ipython="python3 -m IPython"
 alias gita="python3 -m gita"
