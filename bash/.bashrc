@@ -39,3 +39,30 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
 export PS1="$red\A \u$green\$(__git_ps1)$blue \W $ $reset"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash                                                                                                                                                    
+                                                                                                                                                                                            
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'                                                                                                                            
+                                                                                                                                                                                            
+# fe [FUZZY PATTERN] - Open the selected file with the default editor                                                                                                                       
+#   - Bypass fuzzy finder if there's only one match (--select-1)                                                                                                                            
+#   - Exit if there's no match (--exit-0)                                                                                                                                                   
+fe() {                                                                                                                                                                                      
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))                                                                                                                    
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"                                                                                                                                         
+}                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                       
+# fd - cd to selected directory                                                                                                                                                             
+fd() {                                                                                                                                                                                      
+  local dir                                                                                                                                                                                 
+  dir=$(find ${1:-.} -path '*/\.*' -prune \                                                                                                                                                 
+                  -o -type d -print 2> /dev/null | fzf +m) &&                                                                                                                               
+  cd "$dir"                                                                                                                                                                                 
+}                                                                                                                                                                                           
+                                                                                                                                                                                            
+source ~/.vim/bash/z.sh                                                                                                                                                                          
+unalias z 2> /dev/null                                                                                                                                                                      
+z() {                                                                                                                                                                                       
+  [ $# -gt 0 ] && _z "$*" && return                                                                                                                                                         
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"                                                              
+}             
