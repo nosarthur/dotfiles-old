@@ -28,18 +28,12 @@ I just changed from pathogen to vim-plug.
 :source %
 :PlugInstall
 :CocInstall coc-python
+:CocInstall coc-words
 ```
 
 Then inside vim
 ```
 :GoInstallBinaries
-```
-
-Some non-essential plugins are
-
-```
-git clone https://github.com/majutsushi/tagbar.git
-git clone https://github.com/scrooloose/nerdtree.git
 ```
 
 For [coc.nvim](https://github.com/neoclide/coc.nvim)
