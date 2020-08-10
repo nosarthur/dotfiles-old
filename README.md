@@ -1,12 +1,17 @@
 # dotfiles
 
-To debug vim syntastic, add in .vimrc
+
+# plugins
+
+I use vim-plug as manager
 
 ```
-let g:syntastic_debug=3
+:source %
+:PlugInstall
+:CocInstall coc-python
+:CocInstall coc-word
+:CocInstall coc-json
 ```
-
-and `:mes` in vim
 
 # ctags and gotags
 
@@ -18,17 +23,6 @@ go get -u github.com/golang/lint/golint
 go get -u github.com/kisielk/errcheck
 go get -u golang.org/x/tools/cmd/goimports
 pip install flake8
-```
-
-# plugins
-
-I just changed from pathogen to vim-plug.
-
-```
-:source %
-:PlugInstall
-:CocInstall coc-python
-:CocInstall coc-words
 ```
 
 Then inside vim
