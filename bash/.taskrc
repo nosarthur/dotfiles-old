@@ -35,10 +35,19 @@ weekstart=Monday
 # Urgency settings
 urgency.annotation.coefficient=0
 urgency.blocking.coefficient=0
-urgency.blocked.coefficient=0
+urgency.blocked.coefficient=-1
 urgency.project.coefficient=0
 urgency.tags.coefficient=0
-urgency.uda.priority.L.coefficient=-2.0
+urgency.uda.priority.L.coefficient=-2
 
-#
-report.next.filter=+PENDING -BLOCKING limit:7
+# Report
+report.next.filter=+PENDING +UNBLOCKED limit:7 priority.not:L
+#report.next.sort=status-,start-,priority-,project+,due+
+
+# Context
+alias.@=context
+context.work=project:work
+context.home=project.not:work
+
+calendar.details=full
+context=home
