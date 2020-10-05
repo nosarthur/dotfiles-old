@@ -1,5 +1,5 @@
 {
   "python.pythonPath": "/opt/schrodinger/21-1/internal/bin/python3",
-  "python.linting.flake8Args": ["--ignore=E123,E125,E126,E127,E128,E201,E221,E501,E303"],
+  "python.linting.flake8Args": ["--ignore=E123,E125,E126,E127,E128,E201,E221,E303,E501"],
   "python.jediEnabled": false
 }
