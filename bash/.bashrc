@@ -6,25 +6,50 @@ export EDITOR=/usr/bin/vim
 shopt -s autocd
 shopt -s direxpand
 
-alias ls="ls -hN --color=auto --group-directories-first"
+alias ls="ls -hG"
 alias ll="ls -lhtr"
 alias ff='find . -name'
-alias v="vim"
 alias g='git'
-alias t='task'
+alias n='notes'
+alias d='osx-dictionary'
+alias v="vim"
+alias tf='tail -f'
+alias dk='docker'
 alias m='neomutt'
-alias d='dict'
+alias t='task'
+alias ta='task add'
+alias tb='task burndown.dail'
+alias td='task done'
+alias te='task edit'
+alias tm='task +LATEST mod'
+alias tr='task ready'
+alias ts='task start'
 
 alias ipython="python3 -m IPython"
 alias gita="python3 -m gita"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export CDPATH=.:~
+export CDPATH=.:$HOME:$HOME/src
+
+export SCHRODINGER=/opt/schrodinger/21-1
+export SCHRODINGER_SRC=$HOME/src
+export S=$SCHRODINGER
+alias srun=$S/run
+alias fuzzy="$SCHRODINGER/run python3 -m schrodinger.application.scisol.packages.fep.fuzzy"
+alias sipython='$SCHRODINGER/run python3 -m IPython'
+alias bdg=$SCHRODINGER_SRC/mmshare/build_tools/buildinger.sh
+export SCHRODINGER_LIB=$HOME/lib
+
+function mmv(){
+  cat $SCHRODINGER_SRC/mmshare/version.h | grep "#define MMSHARE_VERSION" | awk '{ printf("Next master build -> %03d. Full id -> %d\n", $3%1000+1, $3+1)}'
+}
 
 # Enable tab completion
 source ~/.git-completion.bash
 source ~/.gita-completion.bash
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # colors!
 red="\[\033[01;31m\]"
