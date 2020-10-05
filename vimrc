@@ -5,20 +5,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
+Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-emoji'
 call plug#end()
 
 let g:seoul256_background = 235
 colo seoul256
+
 
 "automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
 
 set clipboard=unnamed
 
+"set number relativenumber
 set number
 set nocompatible
 set hlsearch
@@ -45,22 +48,39 @@ set nowrap
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-autocmd BufWritePre * %s/\s\+$//e 
+autocmd BufWritePre * %s/\s\+$//e
 
 let mapleader = ","
-noremap <Leader>q :quit<CR> " Quit current window
+noremap <Leader>q :q<CR> " Quit current windows
 noremap <Leader>e :qa!<CR> " Quit all windows
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
 vnoremap <Leader>s :sort<CR>
-nmap <leader>t :TagbarToggle<CR>
-nmap <leader>a :CtrlSF -R ""<Left>
-nmap <leader>f :GFiles!<CR>
-nmap <leader>o :Files!<CR>
-nmap <leader>w :BLines<CR>
-nmap <leader>l :Lines!<CR>
-nmap <leader>u :Buffers<CR>
-nmap <leader>r :Rg!<CR>
+
+noremap <Leader><space> :noh<CR>:call clearmatches()<cr>
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+syntax enable
+
+" easier moving of code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" get rid of temporary files
+set nobackup
+set nowritebackup
+set noswapfile
+
+filetype on
+filetype plugin on
+
+" recursive find
+set path+=**
+
+" command hint
+set wildmenu
+set wildmode=longest:list,full
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -89,29 +109,37 @@ else
 endif
 
 
-syntax enable
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" easier moving of code blocks
-vnoremap < <gv
-vnoremap > >gv
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-" get rid of temporary files
-set nobackup
-set nowritebackup
-set noswapfile
-
-filetype on
-filetype plugin on
-
-" recursive find
-set path+=**
-
-" command hint
-set wildmenu
-set wildmode=longest:list,full
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 " fix coc.nvim box color
 highlight Pmenu ctermbg=black ctermfg=yellow
+
+
+nmap <Leader>t :TagbarToggle<CR>
+nmap <leader>a :CtrlSF -R ""<Left>
+nmap <leader>f :GFiles!<CR>
+nmap <leader>o :Files!<CR>
+nmap <leader>w :BLines<CR>
+nmap <leader>l :Lines!<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>r :Rg!<CR>
+nmap <leader>d :GitGutterFold<CR>
+
 
 let g:go_list_type = "quickfix"
 
