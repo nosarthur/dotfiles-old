@@ -17,5 +17,7 @@
 	st = status
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	cram = commit -a --amend --no-edit
+
 [url "git@github.com:"]
     insteadOf = "https://github.com/"
