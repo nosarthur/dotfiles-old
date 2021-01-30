@@ -15,15 +15,6 @@ alias d='osx-dictionary'
 alias v="vim"
 alias tf='tail -f'
 alias dk='docker'
-alias m='neomutt'
-alias t='task'
-alias ta='task add'
-alias tb='task burndown.dail'
-alias td='task done'
-alias te='task edit'
-alias tm='task +LATEST mod'
-alias tr='task ready'
-alias ts='task start'
 
 alias ipython="python3 -m IPython"
 alias gita="python3 -m gita"
