@@ -37,7 +37,10 @@ curl -sL install-node.now.sh/lts | bash
 
 # link vimrc
 
+First rename `dotfiles` as `.vim`
+
 ```
 ln -s ~/dotfiles/vimrc ~/.vimrc
 mv ~/dotfiles/bash/* ~/
 ```
+
