@@ -9,7 +9,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/vim-emoji'
 Plug 'machakann/vim-swap'
 call plug#end()
 
