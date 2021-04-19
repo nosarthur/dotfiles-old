@@ -6,11 +6,14 @@ export EDITOR=/usr/bin/vim
 shopt -s autocd
 shopt -s direxpand
 
-alias ls="ls -hG"
-alias ll="ls -lhtr"
+alias c='clear'
+alias cx='chmod +x'
 alias ff='find . -name'
 alias g='git'
+alias ls="ls -hG"
+alias ll="ls -lhtr"
 alias n='notes'
+alias s='ssh'
 alias t='taskell'
 alias v="vim"
 alias tf='tail -f'

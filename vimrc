@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'machakann/vim-swap'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let g:seoul256_background = 235
