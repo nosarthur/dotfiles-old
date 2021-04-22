@@ -16,6 +16,8 @@ alias n='notes'
 alias s='ssh'
 alias t='taskell'
 alias v="vim"
+alias vb='v ~/.bashrc'
+alias vv='v ~/.vimrc'
 alias tf='tail -f'
 alias dk='docker'
 
