@@ -7,6 +7,7 @@ shopt -s autocd
 shopt -s direxpand
 
 alias c='clear'
+alias cv="networksetup -connectpppoeservice 'NYC VPN'"
 alias cx='chmod +x'
 alias ff='find . -name'
 alias g='git'
