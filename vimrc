@@ -37,14 +37,13 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set colorcolumn=80
 set ignorecase
 set smartcase
 set updatetime=100
 set nowrap
 
-"set foldmethod=indent
-"set nofoldenable
+set foldmethod=indent
+set nofoldenable
 "set foldlevel=2
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -181,3 +180,9 @@ let g:tagbar_type_go = {
 \ }
 
 let g:AutoPairsShortcutFastWrap='<C-w>'
+
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set colorcolumn=80
+    autocmd WinLeave * set colorcolumn=0
+augroup END
