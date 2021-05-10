@@ -9,13 +9,14 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'machakann/vim-swap'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let g:seoul256_background = 235
 colo seoul256
-
+let g:lightline = { 'colorscheme': 'seoul256', }
 
 "automatic reload of .vimrc
 autocmd! bufwritepost .vimrc source %
