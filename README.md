@@ -8,7 +8,7 @@ I use vim-plug as manager
 ```
 :source %
 :PlugInstall
-:CocInstall coc-python
+:CocInstall coc-pyright
 :CocInstall coc-word
 :CocInstall coc-json
 ```
