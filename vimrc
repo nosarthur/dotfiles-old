@@ -61,6 +61,7 @@ vnoremap <Leader>s :sort<CR>
 noremap <Leader><space> :noh<CR>:call clearmatches()<cr>
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap * *``
 
 syntax enable
 
