@@ -9,18 +9,22 @@ shopt -s direxpand
 alias c='clear'
 alias cv="networksetup -connectpppoeservice 'NYC VPN'"
 alias cx='chmod +x'
+alias d='docker'
 alias ff='find . -name'
 alias g='git'
 alias ls="ls -hG"
 alias ll="ls -lhtr"
 alias n='notes'
+alias pbc='pbcopy'
+alias r='greadlink -f'
 alias s='ssh'
 alias t='taskell'
+alias tf='tail -f'
 alias v="vim"
 alias vb='v ~/.bashrc'
+alias vn='v ~/notes/$(notes ls | fzf)'
 alias vv='v ~/.vimrc'
-alias tf='tail -f'
-alias dk='docker'
+alias vg='v ~/.gitconfig'
 
 alias ipython="python3 -m IPython"
 alias gita="python3 -m gita"
